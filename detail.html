@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レストラン詳細｜Aniva</title>
+
+        <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/detail.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <script src="/js/detail.js" defer></script>
+</head>
+
+<body>
+<div class="site detail-page">
+
+    <header class="header">
+        <a href="/index.html" class="logo">
+            <span>Aniva</span>
+            <small>〜アニバ〜</small>
+        </a>
+
+        <div class="header-menu">
+            <button class="find-button" type="button" aria-label="検索">
+                <span>⌕</span>
+                <small>Find</small>
+            </button>
+
+            <button class="menu-button" id="menuButton" type="button" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="menu" id="menu" aria-label="サイトメニュー">
+        <button class="menu-close" id="menuClose" type="button" aria-label="メニューを閉じる">✕</button>
+        <p class="menu-title">MENU</p>
+        <ul>
+            <li><a href="/index.html">トップページ</a></li>
+            <li><a href="/index.html#restaurant">おすすめレストラン</a></li>
+            <li><a href="/index.html#plan">季節の限定プラン</a></li>
+            <li><a href="#">デート</a></li>
+            <li><a href="#">女子会</a></li>
+            <li><a href="#">記念日</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="detail-breadcrumb">
+            TOP ＞ レストランTOP ＞ 東京駅 ＞ レストラン ＞ 店舗名
+        </div>
+
+        <section class="detail-main">
+            <div class="detail-heading">
+                <button
+                    class="detail-favorite"
+                    id="favoriteButton"
+                    type="button"
+                    aria-label="お気に入りに追加"
+                    aria-pressed="false"
+                >♡</button>
+
+                <h1 id="detailName">フレンチレストラン</h1>
+                <p class="detail-subtitle" id="detailAccessLead">JR山手線ほか「東京駅」八重洲口より徒歩3分</p>
+                <p class="detail-price" id="detailPrice">▣6000〜9999円</p>
+                <p class="detail-rating">
+                    口コミ評価 <span class="star">★</span><span id="detailRating">4.5</span>
+                </p>
+            </div>
+
+            <div class="detail-mein-image">
+                <img id="detailImage" src="images/restaurant01.jpg" alt="フレンチレストランの店内">
+            </div>
+
+            <div class="detail-lead">
+                <h2>高層階から見下ろす夜景とともに過ごす<br>特別なロマンティックナイト</h2>
+                <p id="detailDescription">
+                    地上200mから絶景を一望できるイタリアンディナー。シェフ特製の厳選黒毛和牛のステーキや、四季折々の食材をつかった見た目にも美しいコース料理をご用意。乾杯フルートスパークリングワインと窓際確約プランで、大切な人との記憶に残る贅沢な一夜をお楽しみください。
+                </p>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <h2 class="detail-section-title">写真</h2>
+            <div class="detail-photos">
+                <div class="detail-photo-grid">
+                    <figure><img src="images/restaurant01.jpg" alt="レストラン写真1"></figure>
+                    <figure><img src="images/restaurant02.jpg" alt="レストラン写真2"></figure>
+                    <figure><img src="images/restaurant03.jpg" alt="レストラン写真3"></figure>
+                </div>
+                <a class="detail-more-photos" href="#">その他の写真をみる ＞</a>
+            </div>
+        </section>
+
+        <section class="detail-section">
+            <h2 class="detail-section-title">プランを探す</h2>
+            <div class="detail-plans">
+                <div class="detail-plan-list">
+                    <article class="detail-plan">
+                        <div class="detail-plan-image">
+                            <img src="images/plan01.jpg" alt="窓際確約記念日プラン">
+                        </div>
+                        <div class="detail-plan-body">
+                            <h3>【窓際確約×記念日】東京タワーを望む絶景空間で！特選黒毛和牛と乾杯スパークリングを堪能する特別ディナープラン</h3>
+                            <p>大切な記念日を彩る、窓際確約の特別プラン。</p>
+                            <strong class="detail-plan-price">8500円 <small>（税・税込）</small></strong>
+                        </div>
+                    </article>
+
+                    <article class="detail-plan">
+                        <div class="detail-plan-image">
+                            <img src="images/plan02.jpg" alt="デザート付きディナープラン">
+                        </div>
+                        <div class="detail-plan-body">
+                            <h3>【ディナーサーブ】地上200mの夜景とともに過ごす贅沢な夜！特製アニバーサリープレート＆乾杯グラスシャンパン付きフルコース</h3>
+                            <p>夜景と料理をゆっくり楽しめる人気のディナープラン。</p>
+                            <strong class="detail-plan-price">10500円 <small>（税・税込）</small></strong>
+                        </div>
+                    </article>
+
+                    <article class="detail-plan">
+                        <div class="detail-plan-image">
+                            <img src="images/restaurant04.jpg" alt="ロマンティックナイトプラン">
+                        </div>
+                        <div class="detail-plan-body">
+                            <h3>【ロマンティックナイト】大切な人と過ごす最高の夜景！個室で楽しむプレミアムディナー</h3>
+                            <p>記念日やデートにおすすめの贅沢なプラン。</p>
+                            <strong class="detail-plan-price">12500円 <small>（税・税込）</small></strong>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="detail-section detail-access">
+            <h2 class="detail-section-title">アクセス情報</h2>
+
+            <div class="access-row">
+                <div class="access-label">・住所・</div>
+                <div class="access-value" id="detailLocation">東京都千代田区○○○-○○<br>○○○プラザ　24F</div>
+            </div>
+
+            <div class="access-row">
+                <div class="access-label">・アクセス・</div>
+                <div class="access-value">JR山手線ほか「東京駅」八重洲口より徒歩3分、東京メトロ丸の内線「東京駅」より徒歩5分</div>
+            </div>
+
+            <div class="detail-map" aria-label="地図">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51838.13973589108!2d139.6984954336835!3d35.70447862961371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1791518515150!5m2!1sja!2sjp" width="720" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </section>
+
+        <div class="detail-reserve-area">
+            <button class="reserve-button" id="reserveButton" type="button">このお店を予約する</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-logo">Aniva</div>
+        <p>今夜を忘れられない夜に。</p>
+        <small>© Aniva All Rights Reserved.</small>
+    </footer>
+</div>
+
+</body>
+</html>

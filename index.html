@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aniva｜特別な夜のレストラン</title>
+    <meta name="description" content="大切な人と過ごす、特別なひとときを。
+    『Aniva（アニバ）』は、デートや記念日、特別な女子会にぴったりの「とっておきの一軒」が見つかるレストラン検索サイトです。">
+
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- オリジナルCSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ファビコン -->
+    <link rel="icon" href="/images/favicon.ico" type="images/x-icon">
+    <!-- Googleフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <script src="/js/script.js" defer></script>
+</head>
+
+
+<body>
+
+<div class="site">
+
+    <!-- =========================
+        ヘッダー
+    ========================== -->
+    <header class="header">
+
+        <a href="/index.html" class="logo">
+            <span>Aniva</span>
+            <small><strong>〜アニバ〜</strong></small>
+        </a>
+
+
+        <div class="header-menu">
+
+            <button class="find-button">
+                <span>⌕</span>
+                <small><strong>Find</strong></small>
+            </button>
+
+            <button class="menu-button" id="menuButton">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+        ハンバーガーメニュー
+    ========================== -->
+    <nav class="menu" id="menu">
+
+        <button class="menu-close" id="menuClose">
+            ✕
+        </button>
+
+        <p class="menu-title">MENU</p>
+
+        <ul>
+
+            <li>
+                <a href="/index.html">トップページ</a>
+            </li>
+
+            <li>
+                <a href="#restaurant">おすすめレストラン</a>
+            </li>
+
+            <li>
+                <a href="#plan">季節の限定プラン</a>
+            </li>
+
+            <li>
+                <a href="#">デート</a>
+            </li>
+
+            <li>
+                <a href="#">女子会</a>
+            </li>
+
+            <li>
+                <a href="#">記念日</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <main>
+
+
+        <!-- =========================
+            メインビジュアル
+        ========================== -->
+        <section class="Mein">
+
+            <div class="slider">
+
+                <div class="slide active">
+                    <img src="images/mein01.jpg" alt="夜景の見えるレストラン">
+                </div>
+
+                <div class="slide">
+                    <img src="images/mein02.jpg" alt="おしゃれなレストラン">
+                </div>
+
+                <div class="slide">
+                    <img src="images/mein03.jpg" alt="特別なディナー">
+                </div>
+
+
+                <button class="slide-button prev" id="prev">
+                    ＜
+                </button>
+
+                <button class="slide-button next" id="next">
+                    ＞
+                </button>
+
+                <div class="Mein-copy">
+                    <p class="shift-left">失敗したくない夜に、</p>
+                    <p>間違いのない選択を。</p>
+                </div>
+
+                <div class="slider-dots">
+
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+            検索
+        ========================== -->
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="利用シーン、気分、場所から探す"
+                >
+
+            </div>
+
+
+            <!-- カテゴリー -->
+
+            <div class="category-list">
+                <button class="category active" data-category="all">
+                    <div class="category-icon">
+                        ★
+                    </div>
+                    <p>すべて</p>
+                </button>
+
+                <button class="category" data-category="date">
+                    <div class="category-icon">
+                        <img src="images/date-icon.png" alt="デート">
+                    </div>
+                    <p>デート</p>
+                </button>
+
+                <button class="category" data-category="girls">
+                    <div class="category-icon">
+                        <img src="images/girls-icon.png" alt="女子会">
+                    </div>
+                    <p>女子会</p>
+                </button>
+
+                <button class="category" data-category="anniversary">
+                    <div class="category-icon">
+                        <img src="images/anniversary-icon.png" alt="記念日">
+                    </div>
+                    <p>記念日</p>
+                </button>
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+            おすすめレストラン
+        ========================== -->
+        <section class="recommend" id="restaurant">
+
+            <div class="section-heading">
+
+                <p>今夜を忘れられない夜に。</p>
+
+                <div class="heading-line">
+
+                    <span></span>
+
+                    <h2>
+                        おすすめレストラン
+                    </h2>
+
+                    <span></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="restaurant-list">
+
+
+                <!-- レストラン01 -->
+
+                <article
+                    class="restaurant-card"
+                    data-category="date anniversary"
+                    data-name="Luna Ristorante"
+                >
+
+                    <a href="detail.html?id=1">
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="images/restaurant01.jpg"
+                                alt="Luna Ristorante"
+                            >
+
+                        </div>
+
+
+                        <div class="restaurant-content">
+
+                            <div class="restaurant-name">
+
+                                <h3>
+                                    Luna Ristorante
+                                </h3>
+
+                                <div class="rating">
+                                    <span>★</span>
+                                    4.5
+                                </div>
+
+                            </div>
+
+
+                            <div class="tags">
+
+                                <span>デート</span>
+                                <span>夜景</span>
+                                <span>イタリアン</span>
+
+                            </div>
+
+
+                            <p>
+                                夜景を眺めながら楽しむ、
+                                特別なディナーをここで。
+                            </p>
+
+
+                            <div class="card-bottom">
+                                東京都・六本木
+                                <span>›</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- レストラン02 -->
+
+                <article
+                    class="restaurant-card"
+                    data-category="anniversary"
+                    data-name="Noir Tokyo"
+                >
+
+                    <a href="detail.html?id=2">
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="images/restaurant02.jpg"
+                                alt="Noir Tokyo"
+                            >
+
+                        </div>
+
+
+                        <div class="restaurant-content">
+
+                            <div class="restaurant-name">
+
+                                <h3>
+                                    Noir Tokyo
+                                </h3>
+
+                                <div class="rating">
+                                    <span>★</span>
+                                    4.2
+                                </div>
+
+                            </div>
+
+
+                            <div class="tags">
+
+                                <span>記念日</span>
+                                <span>夜景</span>
+                                <span>個室</span>
+
+                            </div>
+
+
+                            <p>
+                                大切な人と過ごす、
+                                落ち着いた空間を。
+                            </p>
+
+
+                            <div class="card-bottom">
+                                東京都・銀座
+                                <span>›</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- レストラン03 -->
+
+                <article
+                    class="restaurant-card"
+                    data-category="girls"
+                    data-name="Mellow Dining"
+                >
+
+                    <a href="detail.html?id=3">
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="images/restaurant03.jpg"
+                                alt="Mellow Dining"
+                            >
+
+                        </div>
+
+
+                        <div class="restaurant-content">
+
+                            <div class="restaurant-name">
+
+                                <h3>
+                                    Mellow Dining
+                                </h3>
+
+                                <div class="rating">
+                                    <span>★</span>
+                                    4.4
+                                </div>
+
+                            </div>
+
+
+                            <div class="tags">
+
+                                <span>女子会</span>
+                                <span>カフェ</span>
+
+                            </div>
+
+
+                            <p>
+                                二人きりでゆっくり話せる
+                                おしゃれな空間。
+                            </p>
+
+
+                            <div class="card-bottom">
+                                東京都・表参道
+                                <span>›</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- レストラン04 -->
+
+                <article
+                    class="restaurant-card"
+                    data-category="date girls"
+                    data-name="Étoile"
+                >
+
+                    <a href="detail.html?id=4">
+
+                        <div class="restaurant-image">
+
+                            <img
+                                src="images/restaurant04.jpg"
+                                alt="Étoile"
+                            >
+
+                        </div>
+
+
+                        <div class="restaurant-content">
+
+                            <div class="restaurant-name">
+
+                                <h3>
+                                    Étoile
+                                </h3>
+
+                                <div class="rating">
+                                    <span>★</span>
+                                    4.3
+                                </div>
+
+                            </div>
+
+
+                            <div class="tags">
+
+                                <span>デート</span>
+                                <span>女子会</span>
+
+                            </div>
+
+
+                            <p>
+                                都会の夜を楽しむ
+                                カジュアルフレンチ。
+                            </p>
+
+
+                            <div class="card-bottom">
+                                東京都・恵比寿
+                                <span>›</span>
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+            季節限定プラン
+        ========================== -->
+
+        <section class="limited" id="plan">
+
+            <div class="section-heading">
+
+                <div class="heading-line">
+
+                    <span></span>
+
+                    <h2>
+                        季節の限定プラン
+                    </h2>
+
+                    <span></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="plan-list">
+
+
+                <article class="plan-card">
+
+                    <img
+                        src="images/plan01.jpg"
+                        alt="秋の特別ディナー"
+                    >
+
+                    <div class="plan-content">
+
+                        <span>
+                            AUTUMN
+                        </span>
+
+                        <h3>
+                            秋の特別ディナープラン
+                        </h3>
+
+                        <p>
+                            秋の味覚を楽しむ、
+                            期間限定のフルコースディナー。
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="plan-card">
+
+                    <img
+                        src="/images/plan02.jpg"
+                        alt="記念日ディナー"
+                    >
+
+                    <div class="plan-content">
+
+                        <span>
+                            ANNIVERSARY
+                        </span>
+
+                        <h3>
+                            大切な日の特別プラン
+                        </h3>
+
+                        <p>
+                            あなたの大切な人の記念日を彩る
+                            特別なディナープラン。
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+        フッター
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            Aniva
+        </div>
+
+        <p>
+            今夜を忘れられない夜に。
+        </p>
+
+        <small>
+            © Aniva All Rights Reserved.
+        </small>
+
+    </footer>
+
+
+</div>
+
+
+</body>
+</html>

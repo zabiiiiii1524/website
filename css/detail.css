@@ -1,0 +1,538 @@
+/* ========================================
+   Aniva 詳細ページ専用CSS
+   index.html共通 style.css併用
+======================================== */
+
+.detail-page {
+    background: #eee1ca;
+}
+
+/* ----------------------------------------
+   パンくず
+---------------------------------------- */
+.detail-breadcrumb {
+    padding: 13px 16px;
+    background: #101a32;
+    color: #f4efe5;
+    font-size: 8px;
+    line-height: 1.6;
+    letter-spacing: .02em;
+}
+
+/* ----------------------------------------
+   店舗メイン情報
+---------------------------------------- */
+.detail-main {
+    padding: 14px 16px 0;
+    background: #eee1ca;
+}
+
+.detail-heading {
+    position: relative;
+    padding: 7px 44px 10px 7px;
+}
+
+.detail-heading h1 {
+    margin: 0 0 2px;
+    color: #111;
+    font-family: "Noto Serif JP", serif;
+    font-size: 25px;
+    line-height: 1.35;
+    font-weight: 500;
+    letter-spacing: .02em;
+}
+
+.detail-subtitle,
+.detail-price,
+.detail-rating {
+    margin: 0;
+    color: #333;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.detail-price {
+    margin-top: 1px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.detail-rating {
+    font-size: 12px;
+}
+
+.detail-rating .star {
+    color: #d8a91f;
+    font-size: 21px;
+    vertical-align: -1px;
+    text-shadow: 0 0 1px #222;
+}
+
+.detail-favorite {
+    position: absolute;
+    top: 4px;
+    right: 3px;
+    width: 39px;
+    height: 39px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #f05a5a;
+    font-family: Arial, sans-serif;
+    font-size: 39px;
+    font-weight: 300;
+    line-height: 39px;
+    cursor: pointer;
+    transition: transform .2s ease, color .2s ease;
+}
+
+.detail-favorite:hover,
+.detail-favorite:focus-visible {
+    transform: scale(1.08);
+}
+
+.detail-favorite.is-favorite {
+    color: #e83e46;
+}
+
+.detail-mein-image {
+    width: 100%;
+    height: 278px;
+    overflow: hidden;
+    background: #888;
+}
+
+.detail-mein-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.detail-lead {
+    padding: 20px 9px 17px;
+    text-align: center;
+}
+
+.detail-lead h2 {
+    margin: 0 0 12px;
+    color: #111;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+.detail-lead p {
+    margin: 0;
+    color: #444;
+    font-size: 8px;
+    line-height: 2.05;
+}
+
+/* ----------------------------------------
+   セクション共通
+---------------------------------------- */
+.detail-section {
+    padding: 0 16px 18px;
+    background: #eee1ca;
+}
+
+.detail-section-title {
+    margin: 0 0 12px;
+    padding: 7px 10px 8px;
+    background: #422475;
+    color: #fff;
+    text-align: center;
+    font-family: "Noto Serif JP", serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: .08em;
+}
+
+.detail-section-title + * {
+    margin-top: 12px;
+}
+
+/* ----------------------------------------
+   写真
+---------------------------------------- */
+.detail-photos {
+    padding: 0 5px 2px;
+}
+
+.detail-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+
+.detail-photo-grid figure {
+    height: 100px;
+    margin: 0;
+    overflow: hidden;
+    background: #888;
+}
+
+.detail-photo-grid img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.detail-more-photos {
+    display: block;
+    margin: 7px 0 0;
+    color: #9a7620;
+    text-align: right;
+    font-size: 8px;
+    font-weight: 600;
+}
+
+/* ----------------------------------------
+   プラン
+---------------------------------------- */
+.detail-plans {
+    padding: 0 4px;
+}
+
+.detail-plan-list {
+    display: grid;
+    gap: 1px;
+    border: 1px solid #b9b3a8;
+    background: #b9b3a8;
+}
+
+.detail-plan {
+    display: grid;
+    grid-template-columns: 115px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 122px;
+    padding: 9px;
+    background: #fff;
+}
+
+.detail-plan-image {
+    width: 115px;
+    height: 96px;
+    overflow: hidden;
+    background: #888;
+}
+
+.detail-plan-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.detail-plan-body {
+    position: relative;
+    min-width: 0;
+    padding-bottom: 21px;
+}
+
+.detail-plan-body h3 {
+    margin: 0 0 5px;
+    color: #222;
+    font-size: 9px;
+    line-height: 1.7;
+    font-weight: 600;
+}
+
+.detail-plan-body p {
+    margin: 0;
+    color: #555;
+    font-size: 7px;
+    line-height: 1.6;
+}
+
+.detail-plan-price {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #7b45c5;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.detail-plan-price small {
+    color: #555;
+    font-size: 6px;
+    font-weight: 400;
+}
+
+/* ----------------------------------------
+   アクセス
+---------------------------------------- */
+.detail-access {
+    padding-bottom: 18px;
+}
+
+.access-row {
+    display: grid;
+    grid-template-columns: 85px minmax(0, 1fr);
+    gap: 10px;
+    padding: 12px 8px;
+    border-bottom: 1px solid #bdb5a6;
+}
+
+.access-label {
+    color: #222;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.access-value {
+    color: #333;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.detail-map {
+    height: 245px;
+    margin: 12px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #888;
+    color: #222;
+    font-size: 15px;
+}
+
+/* ----------------------------------------
+   予約
+---------------------------------------- */
+.detail-reserve-area {
+    padding: 5px 16px 28px;
+    background: #eee1ca;
+}
+
+.reserve-button {
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 20px;
+    border: 0;
+    border-radius: 2px;
+    background: #422475;
+    color: #fff;
+    font-family: "Noto Serif JP", serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .08em;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+    transition: background .2s ease, transform .2s ease;
+}
+
+.reserve-button:hover,
+.reserve-button:focus-visible {
+    background: #321a5a;
+    transform: translateY(-1px);
+}
+
+/* ----------------------------------------
+   PC版
+---------------------------------------- */
+@media screen and (min-width: 768px) {
+    .detail-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        box-shadow: 0 0 30px rgba(0,0,0,.15);
+    }
+
+    .detail-breadcrumb {
+        padding: 16px 48px;
+        font-size: 11px;
+    }
+
+    .detail-main {
+        padding: 30px 48px 0;
+    }
+
+    .detail-heading {
+        position: absolute;
+        z-index: 2;
+        width: 400px;
+        margin: 24px 0 0 24px;
+        padding: 26px 30px 28px;
+        background: rgba(238,225,202,.96);
+        box-shadow: 0 8px 25px rgba(35,25,15,.12);
+    }
+
+    .detail-heading h1 {
+        font-size: 34px;
+        line-height: 1.35;
+    }
+
+    .detail-subtitle,
+    .detail-price,
+    .detail-rating {
+        font-size: 13px;
+    }
+
+    .detail-price {
+        margin-top: 6px;
+        font-size: 16px;
+    }
+
+    .detail-rating {
+        font-size: 15px;
+    }
+
+    .detail-rating .star {
+        font-size: 25px;
+    }
+
+    .detail-favorite {
+        top: 18px;
+        right: 19px;
+        width: 45px;
+        height: 45px;
+        font-size: 44px;
+        line-height: 45px;
+    }
+
+    .detail-mein-image {
+        height: 505px;
+    }
+
+    .detail-lead {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 42px 30px 35px;
+    }
+
+    .detail-lead h2 {
+        font-size: 22px;
+        line-height: 1.8;
+    }
+
+    .detail-lead p {
+        font-size: 12px;
+        line-height: 2.2;
+    }
+
+    .detail-section {
+        padding: 0 48px 32px;
+    }
+
+    .detail-section-title {
+        margin-bottom: 18px;
+        padding: 11px 22px 12px;
+        text-align: left;
+        font-size: 20px;
+        letter-spacing: .12em;
+    }
+
+    .detail-section-title + * {
+        margin-top: 18px;
+    }
+
+    .detail-photos {
+        padding: 0 8px 3px;
+    }
+
+    .detail-photo-grid {
+        gap: 12px;
+    }
+
+    .detail-photo-grid figure {
+        height: 190px;
+    }
+
+    .detail-more-photos {
+        margin-top: 10px;
+        font-size: 11px;
+    }
+
+    .detail-plans {
+        padding: 0 8px;
+    }
+
+    .detail-plan-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        border: 0;
+        background: transparent;
+    }
+
+    .detail-plan {
+        display: block;
+        min-height: 0;
+        padding: 0 0 20px;
+        border: 1px solid #c5beb1;
+        box-shadow: 0 2px 7px rgba(0,0,0,.08);
+    }
+
+    .detail-plan-image {
+        width: 100%;
+        height: 175px;
+    }
+
+    .detail-plan-body {
+        min-height: 160px;
+        padding: 17px 17px 38px;
+    }
+
+    .detail-plan-body h3 {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .detail-plan-body p {
+        font-size: 10px;
+        line-height: 1.8;
+    }
+
+    .detail-plan-price {
+        right: 17px;
+        bottom: 13px;
+        font-size: 17px;
+    }
+
+    .detail-plan-price small {
+        font-size: 8px;
+    }
+
+    .detail-access {
+        padding-bottom: 36px;
+    }
+
+    .access-row {
+        grid-template-columns: 120px minmax(0, 1fr);
+        padding: 18px 14px;
+    }
+
+    .access-label {
+        font-size: 13px;
+    }
+
+    .access-value {
+        font-size: 13px;
+        line-height: 2;
+    }
+
+    .detail-map {
+        height: 310px;
+        margin: 18px 8px 0;
+        font-size: 18px;
+    }
+
+    .detail-reserve-area {
+        padding: 4px 48px 55px;
+        text-align: center;
+    }
+
+    .reserve-button {
+        width: 360px;
+        min-height: 60px;
+        font-size: 15px;
+    }
+}
